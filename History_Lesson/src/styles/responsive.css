@@ -1,0 +1,90 @@
+@media (max-width: 1200px) {
+  .app-shell {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 72px;
+    bottom: 0;
+    width: 280px;
+    transform: translateX(-110%);
+    z-index: 20;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .scrim {
+    display: block;
+    position: fixed;
+    inset: 72px 0 0 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 15;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .course-progress-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-toggle {
+    display: inline-flex;
+  }
+
+  .search-form {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: 68px;
+    margin: 0;
+    z-index: 5;
+    width: auto;
+  }
+
+  .search-input,
+  .search-input.wide {
+    min-width: 160px;
+  }
+
+  .tabs {
+    max-width: 100%;
+    overflow: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+  }
+
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 16px;
+  }
+}
